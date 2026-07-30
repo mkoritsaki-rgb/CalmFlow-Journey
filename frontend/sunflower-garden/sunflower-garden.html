@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sunflower Garden</title>
+
+<link rel="stylesheet" href="sunflower-garden.css">
+
+</head>
+
+
+<body>
+
+<div class="mode-selection">
+
+    <h1>
+        Sunflower Garden
+    </h1>
+
+    <p>
+       Διάλεξε πώς θέλεις να χρησιμοποιήσεις τον κήπο σου.
+    </p>
+
+    <button id="simpleMode">
+
+        🌻 Ο δικός μου κήπος
+
+        <br><br>
+
+       Ένας προσωπικός χώρος για να φροντίζεις τον κήπο σου με τον δικό σου ρυθμό.
+
+    </button>
+
+    <button id="journeyMode">
+
+        🌻 Ο κήπος της διαδρομής μου
+
+        <br><br>
+
+      Ο κήπος εξελίσσεται καθώς χρησιμοποιείς τις λειτουργίες του CalmFlow Journey.
+
+    </button>
+
+</div>
+
+<div class="garden-selection" style="display:none;">
+
+    <h1>
+        🌻 Οι κήποι μου
+    </h1>
+
+    <button id="openSimpleGarden">
+        🌱 Ο δικός μου κήπος
+        <br><br>
+        Ένας ήρεμος χώρος για να δημιουργήσεις.
+    </button>
+
+
+    <button id="openJourneyGarden">
+        🌻 Ο κήπος της διαδρομής μου
+        <br><br>
+        Ο κήπος που μεγαλώνει μαζί με την πρόοδό σου.
+    </button>
+
+
+    <button id="backToCalmflow">
+        ← Επιστροφή στο CalmFlow
+    </button>
+
+</div>
+
+<div class="garden" style="display:none;">
+
+<button id="backToGardens">
+    ← Επιστροφή στους κήπους
+</button>
+
+    <div id="journeyMessage" class="journey-message">
+
+        🌻 Κάθε μικρό βήμα αφήνει το αποτύπωμά του.
+
+    </div>
+
+<div id="flowerMessage" class="journey-message">
+
+    ☀️ Μικρές καθημερινές συνήθειες μπορούν να κάνουν τη διαφορά με τον χρόνο.
+
+</div>
+
+<div id="gardenCompleteMessage" class="journey-message">
+
+    🌻 Ο κήπος σου συνεχίζει να μεγαλώνει όσο συνεχίζεις να αφιερώνεις χρόνο στον εαυτό σου.
+</div>
+    <div class="sky">
+
+        <div class="clouds">
+            ☁️
+        </div>
+
+        <div class="sun">
+            ☀️
+        </div>
+
+    </div>
+
+   <div class="ground">
+<div id="butterflies"></div>
+
+    <div class="garden-area" id="gardenArea">
+
+    </div>
+
+</div>
+
+<script src="sunflower-garden.js"></script>
+
+</body>
+
+</html>

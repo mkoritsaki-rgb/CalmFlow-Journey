@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Floating Thoughts</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div id="game">
+
+
+<!-- Αρχική οθόνη -->
+
+<section id="welcomeScreen">
+
+<h1>
+🎈 Floating Thoughts
+</h1>
+
+<p>
+Κάποιες σκέψεις μένουν μαζί μας περισσότερο απ' όσο θα θέλαμε.
+<br>
+Σήμερα θα τις αφήσουμε να ταξιδέψουν λίγο πιο μακριά.
+</p>
+
+
+<button id="startButton">
+Ξεκίνα
+</button>
+<button id="backToCalmflow">
+
+← Επιστροφή στο CalmFlow
+
+</button>
+
+</section>
+
+
+
+<!-- Κεντρική περιοχή -->
+
+<section id="gameScreen" style="display:none;">
+
+<button id="exitCalmflow">
+
+    ← Επιστροφή στο CalmFlow
+
+</button>
+
+<!-- Ουρανός -->
+
+<div class="sky">
+
+
+<div id="clouds"> </div>
+
+<div id="rain"></div>
+
+<div id="balloons"> </div>
+
+<div id="sun"></div>
+</div>
+
+
+
+
+
+<!-- Σκέψη -->
+
+
+<section id="thoughtSection">
+
+
+<h2>
+✍️Τι σκέφτεσαι αυτή τη στιγμή;
+</h2>
+
+
+<textarea id="thoughtInput"
+placeholder="Γράψε τη σκέψη σου...">
+</textarea>
+
+
+<button id="thoughtButton">
+Συνέχεια
+</button>
+
+
+</section>
+
+
+
+
+
+
+<!-- Αναπνοή -->
+
+
+<section id="breathingSection" style="display:none;">
+
+
+<h2>
+Μικρή παύση
+</h2>
+
+
+<p id="breathingText">
+Πάρε λίγο χρόνο.
+</p>
+
+
+<div id="breathingCircle">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Επιλογή μετά την αναπνοή -->
+
+
+<section id="choiceSection" style="display:none;">
+
+
+<h2>
+💭 Πώς νιώθεις τώρα;
+</h2>
+
+
+
+<button id="calmerButton">
+
+🟢 Νιώθω λίγο καλύτερα.
+
+</button>
+
+
+
+<button id="timeButton">
+
+🔵 Χρειάζομαι λίγο περισσότερο χρόνο.
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Πράσινη διαδρομή -->
+
+
+<section id="releaseSection" style="display:none;">
+
+
+<h2>
+🌤️ Ας δούμε τη σκέψη λίγο διαφορετικά.
+</h2>
+
+
+<div class="thoughtCards">
+
+
+<p>
+☁️ Ίσως αυτή η σκέψη να μην είναι όλη η αλήθεια.
+</p>
+
+
+<p>
+💙 Δεν χρειάζεται να τα λύσω όλα τώρα.
+</p>
+
+
+<p>
+✨ Μπορώ να κάνω ένα μικρό βήμα κάθε φορά.
+</p>
+
+
+</div>
+
+
+
+<button id="releaseButton">
+
+🎈 Άφησέ την να φύγει.
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Μπλε διαδρομή -->
+
+
+<section id="visualizationSection" style="display:none;">
+
+
+<h2>
+🟡 Λίγος ακόμη χρόνος
+</h2>
+
+
+
+<p>
+
+Φαντάσου τη βροχή.
+
+<br><br>
+
+Οι σκέψεις σου είναι σαν σταγόνες.
+
+<br><br>
+
+Δεν χρειάζεται να τις διώξεις.
+<br>
+Άφησέ τες απλώς να πέσουν απαλά
+<br>
+και να χαθούν στο έδαφος.
+
+<br><br>
+
+Μπορείς να πάρεις λίγο χρόνο.
+
+</p>
+
+
+
+<button id="soundButton">
+
+🔊 Άκουσε τη βροχή
+
+</button>
+
+
+
+<audio id="rainSound">
+
+<source src="soft-rain.mp3"> 
+
+</audio>
+
+<button id="sunButton">☀️ Ο ουρανός καθάρισε</button>
+
+<button id="backButton">
+
+↩️ Πίσω
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Τέλος -->
+
+
+<section id="finalMessage" style="display:none;">
+
+
+<h2>
+☀️ Ο ουρανός καθαρίζει
+</h2>
+
+
+<p>
+
+Οι σκέψεις δεν είναι ο ουρανός.
+<br>
+Είναι απλώς σύννεφα που περνούν.
+
+</p>
+
+
+
+<button id="restartButton">
+
+🔄 Μια νέα σκέψη
+
+</button>
+
+
+</section>
+
+
+
+
+</section>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
