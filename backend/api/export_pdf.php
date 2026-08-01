@@ -1,5 +1,7 @@
 <?php
-
+   
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 
 require_once "../config/database.php";
@@ -204,18 +206,26 @@ if($totalMoods > 0)
 // PDF Settings
 // ===============================
 
-
 $options = new Options();
 
+$options->setDefaultFont("DejaVu Sans");
 
 $options->set(
-    "defaultFont",
-    "DejaVu Sans"
+    "isFontSubsettingEnabled",
+    false
 );
 
+$options->set(
+    "isHtml5ParserEnabled",
+    true
+);
+
+$options->set(
+    "isRemoteEnabled",
+    true
+);
 
 $dompdf = new Dompdf($options);
-
 
 
 $html = '
@@ -229,10 +239,8 @@ $html = '
 
 <style>
 
-
 body{
-
-font-family: DejaVu Sans, sans-serif;
+font-family: DejaVu Sans;
 
 background:#f4fbf7;
 
