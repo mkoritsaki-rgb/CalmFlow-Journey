@@ -1,0 +1,657 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    font-family:Arial,sans-serif;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #fff7c2,
+        #dcfce7
+    );
+
+    color:#365314;
+
+}
+
+
+.garden {
+
+    width:100%;
+    min-height:100dvh;
+    height:auto;
+    position:relative;
+
+}
+/* ΟΥΡΑΝΟΣ */
+
+.sky{
+
+    position:relative;
+
+    height:45vh;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    to bottom,
+    #93c5fd,
+    #d9f99d
+    );
+
+    transition:background 2s ease;
+
+}
+
+/* ΟΜΙΧΛΗ */
+
+.sky::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 200%;
+    height: 200px;
+
+    bottom: 0;
+    left: -50%;
+
+    background: rgba(255,255,255,0.15);
+
+    filter: blur(40px);
+
+    animation: fogMove 12s infinite alternate;
+
+}
+
+
+
+@keyframes fogMove {
+
+    from {
+
+        transform: translateX(-100px);
+
+    }
+
+
+    to {
+
+        transform: translateX(100px);
+
+    }
+
+}
+
+
+
+/* ΣΥΝΝΕΦΑ */
+
+.clouds {
+
+    position: absolute;
+
+    top: 80px;
+    left: 20%;
+
+    font-size: 80px;
+
+    opacity: 0.4;
+
+}
+
+
+
+/* ΗΛΙΟΣ */
+
+.sun{
+
+    position:absolute;
+
+    top:30px;
+
+    right:50px;
+
+    font-size:60px;
+
+    opacity:0.3;
+
+    filter:grayscale(80%);
+
+    transition:all 2s ease;
+
+}
+
+
+
+/* ΕΔΑΦΟΣ */
+
+.ground {
+
+    height: 55vh;
+
+    background: linear-gradient(
+        to bottom,
+        #5d4037,
+        #3e2723
+    );
+
+    position: relative;
+
+}
+
+
+
+/* ΣΠΟΡΟΣ */
+
+.seed {
+
+    position: absolute;
+
+    top: -35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 70px;
+
+}
+
+.garden-area{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+.flower{
+
+    position:absolute;
+
+    font-size:75px;
+
+    cursor:pointer;
+
+}
+#butterflies{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+}
+
+
+
+.butterfly{
+
+    position:absolute;
+
+    font-size:30px;
+
+    animation:fly 6s infinite ease-in-out;
+
+}
+
+
+
+@keyframes fly{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+
+    50%{
+
+        transform:translate(60px,-80px);
+
+    }
+
+
+    100%{
+
+        transform:translate(0,0);
+
+    }
+
+}
+
+@media (max-width: 600px){
+
+
+    body{
+ overflow-x:hidden;
+    overflow-y:auto;
+
+    }
+
+
+
+    .clouds{
+
+        font-size:55px;
+
+        top:60px;
+
+    }
+
+
+    .sun{
+
+        font-size:45px;
+
+        right:25px;
+
+        top:20px;
+
+    }
+
+
+
+    .seed{
+
+        font-size:55px;
+
+    }
+
+
+    .butterfly{
+
+        font-size:25px;
+
+    }
+
+
+}
+
+@media (max-width:600px){
+
+
+    body{
+
+        
+    min-height:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+
+
+    }
+
+
+
+    .garden{
+
+        height:100dvh;
+
+    }
+
+
+
+    .sky{
+
+        height:180px;
+
+    }
+
+
+
+    .ground{
+
+        height:40%;
+
+    }
+
+
+
+    .flower{
+
+        font-size:40px;
+
+    }
+
+
+
+    .sun{
+
+        font-size:45px;
+
+        right:20px;
+
+    }
+
+
+
+    .clouds{
+
+        font-size:55px;
+
+    }
+
+.mode-selection button{
+
+    width:90%;
+
+    min-height:110px;
+
+    margin:10px auto;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+}
+}
+
+.journey-message{
+
+    position:absolute;
+
+    top:80px;
+
+    left:50%;
+
+    background:rgba(255,255,255,0.9);
+
+    padding:15px 25px;
+
+    border-radius:20px;
+
+    font-size:18px;
+
+    color:#4a4a4a;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    opacity:0;
+
+    z-index:1000;
+transform: translate(-50%, -20px);
+transition: opacity 1s ease, transform 1s ease;
+}
+.flower-bloom {
+
+    animation: bloom 2s ease;
+
+}
+
+
+@keyframes bloom {
+
+    0% {
+
+        transform: scale(0.8);
+
+        opacity:0.5;
+
+    }
+
+
+    50% {
+
+        transform: scale(1.15);
+
+        opacity:1;
+
+    }
+
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+#backToJourney {
+
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    z-index:10;
+
+    padding:6px 12px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.75);
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    color:#365314;
+
+    transition:0.3s ease;
+
+}
+
+
+#backToJourney:hover {
+
+    transform:scale(1.05);
+
+    background:white;
+
+}
+
+
+.mode-selection{
+
+    width:90%;
+    max-width:600px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    background:
+    rgba(255,255,255,0.75);
+
+    border-radius:35px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.15);
+
+}
+
+
+.mode-selection h1{
+
+    font-size:42px;
+
+    color:#4d7c0f;
+
+    margin-bottom:20px;
+
+}
+
+
+.mode-selection p{
+
+    font-size:20px;
+
+    margin-bottom:30px;
+
+}
+.mode-selection button{
+
+
+    width:80%;
+
+    min-height:130px;
+
+    margin:15px;
+
+    border:none;
+
+    border-radius:30px;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #bef264,
+        #84cc16
+    );
+
+
+    color:#365314;
+
+
+    font-size:18px;
+
+    font-weight:bold;
+
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.15);
+
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+
+.mode-selection button:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ==========================
+   GARDEN SELECTION SCREEN
+========================== */
+
+
+.garden-selection{
+
+    width:90%;
+    max-width:600px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.8);
+
+    border-radius:35px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.15);
+
+}
+
+
+.garden-selection h1{
+
+    font-size:42px;
+
+    color:#4d7c0f;
+
+    margin-bottom:30px;
+
+}
+
+
+.garden-selection button{
+
+
+    width:80%;
+
+    min-height:120px;
+
+    margin:15px auto;
+
+    display:block;
+
+    border:none;
+
+    border-radius:30px;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #bef264,
+        #84cc16
+    );
+
+
+    color:#365314;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.15);
+
+
+    transition:.3s;
+
+}
+
+
+.garden-selection button:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+@media (max-width:400px){
+
+    .flower{
+
+        font-size:30px;
+
+    }
+
+    .garden-area{
+
+        overflow:visible;
+
+    }
+
+}
