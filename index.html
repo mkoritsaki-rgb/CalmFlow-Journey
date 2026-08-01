@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CalmFlow Journey - Μία ανάσα ηρεμίας</title>
+
+  <link rel="stylesheet" href="css/style-clean.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        <img src="images/logo.jpg" alt="CalmFlow Journey Logo">
+
+
+        <div class="brand-text">
+
+            <span>CalmFlow Journey</span>
+
+            <small>Μία ανάσα τη φορά</small>
+
+        </div>
+
+    </div>
+
+
+
+    <nav>
+
+        <a href="index.html">Αρχική</a>
+   <a href="register.html" id="register-button" class="register-button">
+Δημιουργία λογαριασμού
+</a>
+       <a href="login.html" id="login-button" class="login-button">
+☀️ Σύνδεση
+</a>
+<span id="user-area"></span>
+
+    </nav>
+
+
+</header>
+
+
+
+
+
+<section class="hero">
+
+
+<h1>
+    Ένας μικρός χώρος για να κάνεις μια παύση.
+</h1>
+
+
+<p>
+    Το CalmFlow Journey δημιουργήθηκε για να βοηθά στην
+    παρατήρηση των σκέψεων και των συναισθημάτων μέσα από
+    απλές ασκήσεις χαλάρωσης και αυτοφροντίδας.
+</p>
+
+
+<p class="hero-message">
+
+    Μερικές φορές, ένα μικρό βήμα είναι αρκετό.
+
+</p>
+
+
+
+    <button onclick="startBreathing()">
+
+        Ξεκίνα την άσκηση
+
+    </button>
+
+
+
+</section>
+
+
+
+
+
+<section id="breathing-area">
+
+
+</section>
+
+
+
+
+
+
+
+<section class="features">
+
+
+
+    <div class="card">
+
+
+        <h3>🌀 Box Breathing</h3>
+
+
+        <p>
+
+             Μια απλή άσκηση αναπνοής που μπορείς να δοκιμάσεις
+    όταν νιώθεις ένταση ή χρειάζεσαι λίγα λεπτά ηρεμίας.
+
+        </p>
+
+
+    </div>
+
+
+
+
+
+    <div class="card">
+
+
+    <h3>✍️  Γραφή & Αυτοπαρατήρηση</h3>
+
+
+    <p>
+           Ένας προσωπικός χώρος για να καταγράψεις σκέψεις,
+    συναισθήματα και εμπειρίες με τον δικό σου τρόπο.
+    </p>
+
+
+    <button id="journal-button" onclick="openJournal()">
+
+        Άνοιξε το ημερολόγιο
+
+    </button>
+
+    <div id="journal-area"></div>
+
+
+</div>
+
+<div class="card">
+
+<h3>🎈 Floating Thoughts</h3>
+
+<p>
+Άφησε μια δύσκολη σκέψη να ταξιδέψει
+μέσα από μια μικρή άσκηση αποφόρτισης.
+</p>
+
+<button onclick="openFloatingThoughts()">
+Ξεκίνα το παιχνίδι
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🌻 Sunflower Garden</h3>
+
+<p>
+Χτίσε έναν ήρεμο κήπο μέσα από μικρά
+βήματα αυτοφροντίδας.
+</p>
+
+<button onclick="openSunflowerGarden()">
+Ξεκίνα το παιχνίδι
+</button>
+
+</div>
+
+<div class="card">
+
+    <h3>😊 Mood Tracker</h3>
+
+    <p>
+       
+    Κατέγραψε πώς νιώθεις καθημερινά και παρατήρησε
+    μικρές αλλαγές στη διάθεσή σου με τον χρόνο.
+    </p>
+
+    <button onclick="openMoodTracker()">
+        Άνοιξε το Mood Tracker
+    </button>
+
+    <div id="mood-area"></div>
+
+</div>
+
+
+    <div class="card">
+
+
+        <h3>📈Προσωπική Πορεία</h3>
+
+
+        <p>
+
+    Παρατήρησε τις καταγραφές σου και δες
+    τη δική σου πορεία μέσα στην εφαρμογή
+
+        </p>
+
+
+        <button id="progress-button" onclick="toggleProgress()">
+    Δες την πρόοδό σου
+</button>
+<br><br>
+
+<button onclick="exportPDF()">
+    📄 Κατέβασε την προσωπική σου αναφορά
+</button>
+<div id="progress-data" style="display:none;">
+
+</div>
+   
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="content">
+
+
+<h2>
+Τι είναι το CalmFlow Journey;
+</h2>
+
+
+<p>
+
+Το CalmFlow Journey είναι μια εφαρμογή ψηφιακής υποστήριξης
+που δημιουργήθηκε για να βοηθά τον χρήστη σε στιγμές έντονου
+άγχους ή πανικού, προσφέροντας απλές ασκήσεις χαλάρωσης,
+καταγραφή σκέψεων και εργαλεία αυτοπαρατήρησης.
+
+Στόχος της εφαρμογής είναι να προσφέρει έναν ήρεμο χώρο όπου
+ο χρήστης μπορεί να παρατηρεί τα συναισθήματά του και να
+χτίζει μικρές καθημερινές πρακτικές φροντίδας του εαυτού.
+</p>
+
+
+
+
+
+<h2>
+Τι είναι μια κρίση πανικού;
+</h2>
+
+
+<p>
+
+Η κρίση πανικού είναι ένα ξαφνικό επεισόδιο έντονου
+φόβου ή δυσφορίας που μπορεί να εμφανιστεί ακόμη
+και χωρίς πραγματικό κίνδυνο.
+
+</p>
+
+
+
+
+
+<h3>
+Συνηθισμένα συμπτώματα:
+</h3>
+
+
+<ul>
+
+<li>Έντονη ταχυκαρδία</li>
+
+<li>Δυσκολία στην αναπνοή</li>
+
+<li>Ζάλη ή αίσθημα λιποθυμίας</li>
+
+<li>Τρέμουλο και ένταση</li>
+
+<li>Έντονος φόβος</li>
+
+</ul>
+
+
+
+</section>
+
+
+<hr>
+
+<h2>
+Σημαντική ενημέρωση
+</h2>
+
+
+<p>
+Το CalmFlow Journey αποτελεί ένα ψηφιακό εργαλείο υποστήριξης
+και αυτοπαρατήρησης. Οι ασκήσεις αναπνοής, η θεραπευτική γραφή
+και οι υπόλοιπες λειτουργίες έχουν σχεδιαστεί για να βοηθούν
+στη διαχείριση στιγμών άγχους και έντασης.
+</p>
+
+
+<p>
+Το CalmFlow Journey <strong>δεν αντικαθιστά</strong> την αξιολόγηση,
+τη διάγνωση ή τη θεραπεία από επαγγελματία ψυχικής υγείας.
+Αν αισθάνεσαι ότι χρειάζεσαι υποστήριξη, είναι σημαντικό να
+επικοινωνήσεις με έναν ειδικό.
+</p>
+
+
+
+<h3>
+Χρήσιμες γραμμές ψυχολογικής υποστήριξης
+</h3>
+
+
+<ul>
+
+<li>
+📞 <strong>10306</strong> - Γραμμή ψυχοκοινωνικής υποστήριξης
+</li>
+
+
+<li>
+📞 <strong>1018</strong> - Γραμμή παρέμβασης για την αυτοκτονία
+</li>
+
+
+<li>
+📞 <strong>116 123</strong> - Ευρωπαϊκή γραμμή συναισθηματικής υποστήριξης
+</li>
+
+
+<li>
+📞 <strong>112</strong> - Σε περίπτωση άμεσης ανάγκης
+</li>
+
+</ul>
+
+
+<p>
+Αν υπάρχει άμεσος κίνδυνος ή κατάσταση έκτακτης ανάγκης,
+αναζήτησε άμεσα βοήθεια από τις υπηρεσίες έκτακτης ανάγκης.
+</p>
+
+
+
+<footer>
+
+<p>
+© CalmFlow Journey - Μία ανάσα τη φορά
+</p>
+
+<p>
+
+<a href="frontend/terms.html">
+Όροι Χρήσης
+</a>
+
+|
+
+<a href="frontend/privacy.html">
+Πολιτική Απορρήτου
+</a>
+
+</p>
+<a href="https://mairikantaprojects.tech" class="back-home">
+    ← Επιστροφή στην αρχική σελίδα
+</a>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script src="auth.js"></script>
+
+<script>
+
+checkLogin();
+
+</script>
+
+
+</body>
+
+</html>
