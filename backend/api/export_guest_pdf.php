@@ -113,15 +113,24 @@ $quote = $quotes[array_rand($quotes)];
 
 $options = new Options();
 
+$options->setDefaultFont("DejaVu Sans");
 
 $options->set(
-    "defaultFont",
-    "DejaVu Sans"
+    "isFontSubsettingEnabled",
+    false
 );
 
+$options->set(
+    "isHtml5ParserEnabled",
+    true
+);
+
+$options->set(
+    "isRemoteEnabled",
+    true
+);
 
 $dompdf = new Dompdf($options);
-
 
 
 
